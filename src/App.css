@@ -1,38 +1,101 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EEE;
+}
+
+main {
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+h1 {
+  font-size: 2.5rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 span {
+  font-size: 0.5rem;
+  vertical-align: text-top;
+  display: inline-block;
+  margin-top: 9px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2.balance-text {
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.basic-info {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 7px;
+}
+
+form input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+form input[type="datetime-local"]{
+  color: #676767;
+}
+
+form button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 8px 4px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.transactions {
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.transaction {
+display: flex;
+justify-content: space-between;
+margin-top: 15px;
+padding-top: 10px;
+border-top: 1px solid #bcbcbc;
+}
+
+.transaction:first-child {
+  border: 0;
+}
+
+.transaction .name {
+  font-size: 1.2rem;
+}
+
+.transaction .description {
+  font-size: 0.8rem;
+  color: #494949;
+}
+
+.transaction .right {
+  text-align: right;
+}
+
+.transaction .price {
+  font-size: 1.2rem;
+}
+
+.transaction .price.red {
+  color: rgb(146, 37, 37);
+}
+
+.transaction .price.green {
+  color: rgb(42, 160, 42);
+}
+
+.transaction .datetime {
+  font-size: 0.8rem;
+  color: #494949;
 }
